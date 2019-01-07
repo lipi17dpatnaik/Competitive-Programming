@@ -12,7 +12,7 @@ for(i=0;i<size;i++)
 {sum2=sum2+a[i];
  if(a[i]>n)
  {n=a[i];}
-sum1=n*(n+1)/2
+sum1=n*(n+1)/2;
 mnum=sum1-sum2;
 return mnum;
 }
