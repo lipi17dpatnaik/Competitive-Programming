@@ -9,8 +9,8 @@ int MSAS(int a[], int size)
   
    for (i = 1; i < size; i++) 
    { 
-        curr_max = max(a[i], curr_max+a[i]); 
-        final_max  = max(final_max, curr_max); 
+        curr_max = std::max(a[i], curr_max+a[i]); 
+        final_max  = std::max(final_max, curr_max); 
    } 
    return final_max ; 
 } 
