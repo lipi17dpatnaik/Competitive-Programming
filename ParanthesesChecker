@@ -1,0 +1,63 @@
+#include<bits/stdc++.h> 
+using namespace std; 
+  
+// function
+bool ParanthesisChecker(string str) 
+{ 
+    stack<char> s; 
+    char c; 
+  
+    for (int i=0; i<str.length(); i++) 
+    { if (str[i]=='('||str[i]=='['||str[i]=='{') 
+        { 
+            // Push the element in the stack 
+            s.push(str[i]); 
+            continue; 
+        } 
+      if (s.empty()) 
+         return false; 
+         
+      switch (str[i]) 
+        { 
+        case ')': 
+  
+            // Store the top element in a 
+            c = s.top(); 
+            s.pop(); 
+            if (c=='{' || c=='[') 
+                return false; 
+            break; 
+  
+        case '}': 
+  
+            // Store the top element in b 
+            c = s.top(); 
+            s.pop(); 
+            if (c=='(' || c=='[') 
+                return false; 
+            break; 
+  
+        case ']': 
+  
+            // Store the top element in c 
+            c = s.top(); 
+            s.pop(); 
+            if (c =='(' || c == '{') 
+                return false; 
+            break; 
+        } 
+    }
+           return (s.empty()); 
+} 
+  
+// Driver program
+int main() 
+{ 
+    string str = "{()}[]"; 
+  
+    if (ParanthesisChecker(str)) 
+        cout << "Balanced"; 
+    else
+        cout << "Not Balanced"; 
+    return 0; 
+} 
