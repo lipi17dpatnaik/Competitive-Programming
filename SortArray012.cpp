@@ -1,10 +1,7 @@
 #include <iostream>
 using namespace std;
  
-#include <iostream>
-using namespace std;
- 
-int SortArray(int a[],int size)
+void SortArray(int a[],int size)
 	{ int i;   int count0=0;   int count1=0;   int count2=0;
 		for(i=0;i<size;i++)
 	   	{ if (a[i]==0)
@@ -20,13 +17,11 @@ int SortArray(int a[],int size)
 	   	 { cout<< "1 ";}
 	   	 for(i=0;i<count2;i++)
 	   	 { cout<< "2 ";}
-	 return 0;
 	}
  
 int main()
 { int arr[]= {0,2,0,1,0,2};
   int size=sizeof(arr)/sizeof(arr[0]);
-  int s=SortArray(arr,size);
-  cout<< s;
+  SortArray(arr,size);
   return 0;
 }
