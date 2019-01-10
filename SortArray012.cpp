@@ -20,6 +20,7 @@ int SortArray(int a[],int size)
 	   	 { cout<< "1 ";}
 	   	 for(i=0;i<count2;i++)
 	   	 { cout<< "2 ";}
+	 return 0;
 	}
  
 int main()
