@@ -31,5 +31,6 @@ int main()
 char s[] = "I love programming very much";
 
 ReverseWord(s);
+cout<< s;
 return 0;
 }
