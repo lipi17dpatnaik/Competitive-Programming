@@ -6,22 +6,22 @@ void ReverseWord(char *c)
 char *end = c;
 
 /*reversal of individual wordes Eg: if CAT.DOG then this changes it to TAC.GOD*/
-while( *temp )
+while( *end )
 {
-	temp++;
-	if (*temp == '\0')
+	end++;
+	if (*end == '\0')
 	{
-	reverse(start, temp);
+	reverse(start, end);
 	}
-	else if(*temp == '.')
+	else if(*end == '.')
 	{
-	reverse(start, temp);
-	start = temp+1;
+	reverse(start, end);
+	start = end+1;
 	}
 } /* End while */
 
 /*This reverses entire string i.e changes TAC.GOD to DOG.CAT */
-reverse(c, temp);
+reverse(c, end);
 }
 
 
