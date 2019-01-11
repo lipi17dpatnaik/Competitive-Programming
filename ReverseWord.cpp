@@ -28,7 +28,7 @@ reverse(c, end);
 /* Driver function*/
 int main()
 {
-char s[] = "I love programming very much";
+char s[] = "I.love.programming.very.much";
 
 ReverseWord(s);
 cout<< s;
